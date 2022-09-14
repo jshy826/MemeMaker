@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="color-options">
+        <input type="color" id="color">
+        <div class="color-option" style="background-color: #55efc4;" data-color="#55efc4"></div>
+        <div class="color-option" style="background-color: #81ecec;" data-color="#81ecec"></div>
+        <div class="color-option" style="background-color: #74b9ff;" data-color="#74b9ff"></div>
+        <div class="color-option" style="background-color: #a29bfe;" data-color="#a29bfe"></div>
+        <div class="color-option" style="background-color: #dfe6e9;" data-color="#dfe6e9"></div>
+        <div class="color-option" style="background-color: #ffeaa7;" data-color="#ffeaa7"></div>
+        <div class="color-option" style="background-color: #fab1a0;" data-color="#fab1a0"></div>
+        <div class="color-option" style="background-color: #ff7675;" data-color="#ff7675"></div>
+        <div class="color-option" style="background-color: #fd79a8;" data-color="#fd79a8"></div>
+        <div class="color-option" style="background-color: #636e72;" data-color="#636e72"></div>
+        <div class="color-option" style="background-color: #000000;" data-color="#636e72"></div>
+    </div>
+    <canvas></canvas>
+    <div class="btns">
+        <div class="draw-size"><input type="range" id="line-width" min="1" max="10" value="5" step="0.5" /><a id="lineWidthValue"></a></div>
+        <button id="mode-btn">⬛Fill</button>
+        <button id="destroy-btn">💣Destroy</button>
+        <button id="eraser-btn">🗑Erase</button>
+        <!-- 이어줄 요소의 id와 for의 값이 같으면 서로 이어짐 -->
+        <label for="file" class="label-btn">
+            📂Add Photo
+            <input type="file" id="file" accept="image/*" /> <!-- acccept에 원하는 파일형식만 지정할 수도 있음 -->
+        </label>
+        <input type="text" placeholder="Write and double click" id="text" />
+        <button id="save">🖼Save Image</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
